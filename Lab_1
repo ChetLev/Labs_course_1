@@ -1,0 +1,58 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string request;
+    
+    std::cout << "Введите тип данных: ";
+    std::getline(std::cin, request);
+    
+    if (request == "char") {
+        std::cout << "char, 8 бит, min = -128, max = 127\n";
+    } else if(request == "short") {
+        std::cout << "short, 16 бит, min = -32768, max = 32767\n";
+    } else if(request == "unsigned short") {
+        std::cout << "unsigned short, 16 бит, min = 0, max = 65535\n";
+    } else if(request == "int") {
+        std::cout << "int, 32 бит, min = −2 147 483 648, max = 2 147 483 647\n";
+    } else if(request == "unsigned int") {
+        std::cout << "unsigned int, 32 бит, min = 0, max = 4 294 967 295\n";
+    } else if(request == "long") {
+        std::cout << "long, 64 бит, min = −9 223 372 036 854 775 808, max = 9 223 372 036 854 775 808\n";
+    } else if(request == "unsigned long") {
+        std::cout << "unsigned long, 64 бит, min = 0, max = 18 446 744 073 709 551 615\n";
+    } else if(request == "char") {
+        std::cout << "char, 8 бит, min = -128, max = 127\n";
+    } else if(request == "bool") {
+        std::cout << "bool, 1 бит, min = 0, max = 1\n";
+    } else if(request == "float") {
+        std::cout << "float, 32 бит, min = ~1.2E-38, max = ~3.4E+38\n";
+    } else if(request == "double") {
+        std::cout << "double, 64 бит, min = ~2.2E-308, max = ~1.8E+308\n";
+    }
+    else {
+        std::cout << "Неизвестный тип данных\n";
+    }
+    
+    
+    return 0;
+}
+
+int main() {
+    int a = 10, b = 5, c;
+    c = a + b;
+    std::cout << c << std::endl;
+    
+    double t1 = 2.3, t2 = 4.322123, t3;
+    t3 = t1 * t2;
+    std::cout << t3 << std::endl;
+    
+    char d1 = 'A', d2 = 2, d3;
+    d3 = d1 + d2;
+    std::cout << d3 << std::endl;
+    
+    bool f1, f2 = 1, f3;
+    f3 = f1 && f2;
+    std::cout << f3 << std::endl;
+    return 0;
+}
