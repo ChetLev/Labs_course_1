@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath>
+
+int main() {
+
+    float a, b, c, p, s;
+    std::cout << "Введите первое число: ";
+    std::cin >> a;
+    std::cout << "Введите второе число: ";
+    std::cin >> b;
+    std::cout << "Введите третье число: ";
+    std::cin >> c;
+
+    if (a + b > c && a + c > b && b + c > a) {
+            p = (a + b + c) / 2;
+            s = sqrt(p * (p - a) * (p - b) * (p - c));
+            std::cout << "Площадь треугольника: " << s << std::endl;
+    } else {std::cout << "Такого треугольника не существует\n";
+    }
+
+ return 0;
+}
