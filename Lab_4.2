@@ -1,0 +1,33 @@
+#include <iostream>
+
+int main() {
+    int N;
+
+    std::cout << "Введите код ошибки (0-3): ";
+    std::cin >> N;
+
+    if (std::cin.fail()) {
+        std::cout << "Ошибка: введено некорректное значение." << std::endl;
+        return 1;
+    }
+
+    switch (N) {
+        case 0:
+            std::cout << "Все хорошо." << std::endl;
+            break;
+        case 1:
+            std::cout << "Ошибка чтения файла." << std::endl;
+            break;
+        case 2:
+            std::cout << "Ошибка записи файла." << std::endl;
+            break;
+        case 3:
+            std::cout << "Не все поля определены." << std::endl;
+            break;
+        default:
+            std::cout << "Ошибка: неизвестный код ошибки." << std::endl;
+            break;
+    }
+
+    return 0;
+}
