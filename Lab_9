@@ -1,0 +1,22 @@
+#include <iostream>
+
+int main() {
+    unsigned short number;
+
+    std::cout << "Введите целое число типа unsigned short: ";
+    std::cin >> number;
+
+    // Указатель на unsigned short
+    unsigned short* ptr = &number;
+
+    // Преобразуем указатель на unsigned short в указатель на unsigned char
+    unsigned char* bytePtr = reinterpret_cast<unsigned char*>(ptr);
+
+    // Выводим содержимое каждого байта
+    std::cout << "Содержимое байтов числа " << number << ":\n";
+    for (size_t i = 0; i < sizeof(unsigned short); ++i) {
+        std::cout << "Байт " << i << ": " << static_cast<int>(bytePtr[i]) << std::endl;
+    }
+
+    return 0;
+}
