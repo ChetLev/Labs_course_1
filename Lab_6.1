@@ -1,0 +1,35 @@
+#include <iostream>
+
+int main() {
+	short j; //длина массива
+	bool same_values = false; //2 одинак знач в массиве
+	std::cout << "Введите длину массива" << std::endl;
+	std::cin >> j;
+	int array[10000] = {};
+	std::cout << "Введите элементы массива" << std::endl;
+	for (short i = 0; i < j; i++) {
+		std::cin >> array[i];
+	}
+	std::cout << std::endl;
+	for (short a = 0; a < j - 1; a++)
+		for (short b = a + 1; b < j; b++) { //поиск одинак знач
+			if (array[a] == array[b]) {
+				same_values = true;
+				break;
+			}
+		}
+	if (same_values) { //цикл сортировки
+		for (short a = 0; a < j - 1; a++)
+			for (short b = a + 1; b < j; b++){
+				if ((array[b] % 10) > (array[a] % 10)) {
+					std::swap(array[a], array[b]);
+				}
+		}
+		for (short i = 0; i < j; i++) { //печать массива после сортировки
+			std::cout << array[i] << " ";
+		}
+	}
+	else
+		std::cout << "Одинаковых чисел не найдено" << std::endl;
+	return 0;
+}
