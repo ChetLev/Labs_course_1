@@ -1,0 +1,21 @@
+#include <iostream>
+
+int main() {
+    int x;
+
+    std::cout << "Введите значение x (-1 или 1): ";
+    std::cin >> x;
+
+    if (std::cin.fail() || (x != -1 && x != 1)) {
+        std::cout << "Ошибка: введено некорректное значение. Пожалуйста, введите -1 или 1." << std::endl;
+        return 1;
+    }
+
+    if (x == -1) {
+        std::cout << "Negative number" << std::endl;
+    } else {
+        std::cout << "Positive number" << std::endl;
+    }
+
+    return 0;
+}
