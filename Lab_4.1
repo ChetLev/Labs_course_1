@@ -1,0 +1,25 @@
+#include <iostream>
+
+int main() {
+    int A, B, C;
+
+    std::cout << "Введите натуральные числа A, B и C: ";
+    std::cin >> A >> B >> C;
+
+    if (A <= 0 || B <= 0 || C <= 0) {
+        std::cout << "Все числа должны быть натуральными (больше 0)." << std::endl;
+        return 1;
+    }
+
+    if ((A + B) % C == 0) {
+        if (C % B == 0) {
+            std::cout << "(A + B) / C - C / B = " << (A + B) / C - C / B << std::endl;
+        } else {
+            std::cout << "(A + B) / C + B * C = " << (A + B) / C + B * C << std::endl;
+        }
+    } else {
+        std::cout << "A - B + C = " << A - B + C << std::endl;
+    }
+
+    return 0;
+}
