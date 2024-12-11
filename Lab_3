@@ -1,0 +1,24 @@
+#include <iostream>
+
+int main() {
+
+    unsigned int x;
+    int i;
+
+    std::cout << "Введите число x (0 < x < 10^9): ";
+    std::cin >> x;
+
+    if (x <= 0 || x >= 1000000000) {
+        std::cout << "Число должно быть в диапазоне (0, 10^9)." << std::endl;
+        return 1;
+    }
+
+    std::cout << "Введите индекс бита i (начиная с 0): ";
+    std::cin >> i;
+
+    unsigned int result = x | (1 << i);
+
+    std::cout << "Результат после установки " << i << "-го бита: " << result << std::endl;
+
+    return 0;
+}
